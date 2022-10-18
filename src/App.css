@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #FFA770;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.boton__bars i {
+    color: #FF731B;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav__titulo {
+    font-weight: 600;
+    font-family: "Orbitron";
+    color: #FF731B;
+    font-size: 26px;
+}
+.nav__titulo:hover {
+    color: #FFA770
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+.nav__link{
+    text-decoration: none;
+    color: #FF731B;;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 15px;
+}
+.nav__link:hover {
+    color: #FFA770;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.saludando {
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Orbitron";
+    font-weight: 700;
+    font-size: 52px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar__container {
+    background-color: #1B1918;
 }
