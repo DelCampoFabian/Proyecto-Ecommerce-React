@@ -7,34 +7,37 @@
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    background-color: #FFA770;
+    background-color: #FFF;
 }
 
 .boton__bars i {
-    color: #FF731B;
+    color: #0F81B1;
 }
 
 .nav__titulo {
-    font-weight: 600;
+    font-weight: 700;
     font-family: "Orbitron";
-    color: #FF731B;
+    color: #0F81B1;
     font-size: 26px;
 }
 .nav__titulo:hover {
-    color: #FFA770
+    color: #52A5C9;
 }
 
 
 
 .nav__link{
     text-decoration: none;
-    color: #FF731B;;
+    color: #0F81B1;
     font-size: 18px;
-    font-weight: 500;
-    margin: 0 15px;
+    font-weight: 600;
+    margin: 0 10px;
+    letter-spacing: 1px;
+
 }
 .nav__link:hover {
-    color: #FFA770;
+    color: #000;
+   
     
 }
 
@@ -44,8 +47,191 @@ body {
     font-family: "Orbitron";
     font-weight: 700;
     font-size: 52px;
+    color: #309DD8;
+    letter-spacing: 1px;
 }
 
 .navbar__container {
-    background-color: #1B1918;
+    background-color: #fff;
+    border-bottom: 3px solid #0F81B1;
+    
+}
+.count__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.count__container-cant{
+    margin: 12px 15px;
+}
+.count {
+    padding: 0px 2px 2px;
+    font-size: 18px;
+    color: #0F81B1;
+    background-color: transparent;
+    border: none;
+}
+
+.count__total {
+    padding: 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.generic-button {
+    background-color: #0F81B1;
+    border: 2px solid #309DD8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 14px;
+    border-radius: 4px;
+    color: #FFF;
+    transition: .2s;
+    transition-delay: .1s;
+}
+.generic-button:hover {
+    background-color: #309DD8;
+
+}
+
+
+/* -- productos -- */
+
+
+.item__card {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 16px 0px #a3a3a3;
+    margin-top: 16px;
+}
+
+.item__img {
+margin-top: 16px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.item__name {
+    margin-top: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    
+}
+.item__price{
+    margin-top: 15px;
+    font-size: 14px;
+}
+.item__detalle{
+    margin: 16px 0;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #0F81B1;
+    transition: .3s;
+}
+.item__detalle:hover{
+    color: #000;
+}
+
+@media (min-width:992px) {
+    .item__card {
+        padding: 8px;
+        margin: 16px;
+        
+    }
+}
+
+/* Detail */
+
+.detail__container {
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding: 32px;
+    
+    border-radius: 5px;
+    
+    
+}
+.detail__img {
+    margin: 0px;
+    border-right: 3px solid #ccc ;
+    border-radius: 8px;
+    
+}
+.detail__img img {
+    width: 515px;
+    height: 515px;
+    object-fit: contain;
+}
+
+.detail__text {
+   margin: 0 50px;
+
+  
+}
+.detail__text-marca{
+    color: #0F81B1;
+}   
+.detail__text-nombre{
+    font-family: "Orbitron";
+}  
+.detail__text-precio, .detail__text-marca,.detail__text-nombre{
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 16px auto;
+}  
+.span__container{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.span__stock {
+    margin: 0 16px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.detail__text-pagos{
+    font-weight: 600;
+    font-size: 16px;
+    margin: 16px auto;
+}
+.detail__text-unidades{
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 16px auto;
+    font-size: 16px;
+} 
+
+.pagos__container {
+    margin: 16px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.pagos__container img {
+    width: 40px;
+    height: 25px;
+    margin: 4px 5px;
+    border: 1px solid #a3a3a388;
+}
+.detail__text-envio{
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 16px auto;
+    color: #0F81B1;
+    font-size: 16px;
+}
+.detail__text-envio i {
+    font-size: 26px;
+    color: #262626;
+    margin: 0 8px;
 }
