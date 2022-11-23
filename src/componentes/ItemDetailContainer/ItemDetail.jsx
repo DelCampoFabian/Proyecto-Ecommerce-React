@@ -6,12 +6,19 @@ import imagenTres from '../../assets/img/macro.jpg';
 import imagenCuatro from '../../assets/img/santander.jpg';
 import imagenCinco from '../../assets/img/mastercard.jpg';
 import {FaTruck, FaStoreAlt} from 'react-icons/fa';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../CartContext/CartContext';
 
 
 const ItemDetail = ({detail}) => {
-    const onAdd = (count) => {
-        console.log(`Agregaste ${count} productos`)
-    } 
+    const [toCart , setToCart] = useState(false)
+    const {addToCart} = useContext(CartContext)
+    const onAdd = (quantity) => {
+        setToCart(true)
+        addToCart(detail, quantity)
+    };
 
   return (
     <div className='detail__container'>
@@ -32,17 +39,14 @@ const ItemDetail = ({detail}) => {
             </div>
             <h4 className='detail__text-unidades'>Unidades:</h4>
             <div className='span__container'>
-                <span><ItemCount onAdd={onAdd} stock={detail.stock} initial={1} /></span>
-                <span className='span__stock'>Stock: {detail.stock} </span>
+            {
+                toCart ?  <Link to="/cart" className='generic-link'>Ir al carrito</Link> : <><span><ItemCount onAdd={onAdd} stock={detail.stock} initial={1} /></span>
+                <span className='span__stock'>Stock: {detail.stock} </span></>
+            }
             </div>
             <p className='detail__text-envio'><i><FaTruck/> </i> Envio GRATIS a todo el pais!</p>
             <p className='detail__text-envio'><i><FaStoreAlt/></i> Retiro Gratis en sucursal</p>
-            <button className='generic-button'>
-                Comprar
-            </button>
-            
         </div>
-        
     </div>
   )
 }

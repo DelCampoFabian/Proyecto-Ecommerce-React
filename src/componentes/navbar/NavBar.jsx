@@ -2,9 +2,28 @@ import React from 'react'
 import CartWidget from './CartWidget'
 import {VscThreeBars} from 'react-icons/vsc'
 import { Link } from 'react-router-dom'
+import { useState, useEffect} from 'react'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../services/firebaseConfig'
 
 
 const NavBar = () => {
+    const [category, setCategory] = useState([])
+
+    useEffect(() => {
+        const catCollection= collection(db, "categorias")
+        getDocs(catCollection)
+        .then((resp) => {
+        const secciones = resp.docs.map((prod)=>{
+                return  ({
+                    id: prod.id,
+                    ...prod.data()
+                    })
+            });
+            setCategory(secciones)
+        })
+    }, [])
+    
     return (
         <nav className="navbar navbar-expand-lg navbar__container">
             <div className="container-fluid">
@@ -14,17 +33,17 @@ const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse d-flex-md justify-content-around" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item mx-5">
-                            <Link className="nav__link" to="/categoria/Celulares" aria-current="page">Celulares</Link>
-                        </li>
-                        <li className="nav-item mx-5">
-                            <Link className="nav__link" to="/categoria/Accesorios">Accesorios</Link>
-                        </li>
+                        {
+                            category.map((cat) => {
+                                return (
+                                    <li key={cat.id} className="nav-item mx-5">
+                                        <Link className="nav__link" to={`/categoria/${cat.path}`} aria-current="page">{cat.titulo}</Link>
+                                    </li>
+                                )
+                            })
+                        }
                         <li className="nav-item mx-5">
                             <Link className="nav__link" to="/cart" ><CartWidget /></Link>
-                        </li>
-                        <li className="nav-item mx-5">
-                            <Link className="nav__link" to="/" >Nosotros</Link>
                         </li>
                     </ul>
                 </div>

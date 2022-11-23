@@ -106,15 +106,6 @@ export const productos = [
         marca: "Apple",
         categoria: "Celulares",
         image: "https://www.megatone.net/images/Articulos/zoom2x/209/01/MKT0243ETC.jpg"
-    }
-    ,{
-        id: 13,
-        nombre: "AURICULAR BLUETOOTH PHILIPS TAT2205BK/00",
-        precio: 9649,
-        stock: 10,
-        marca: "Philips",
-        categoria: "Accesorios",
-        image: "https://medias.musimundo.com/medias/00307054-176147-1-176147-1.jpg-size96?context=bWFzdGVyfHJvb3R8MjM2MnxpbWFnZS9qcGVnfGg0NC9oYmIvMTAzNzk0NTMxMDQxNTgvMDAzMDcwNTQtMTc2MTQ3XzEtMTc2MTQ3XzEuanBnX3NpemU5NnxjNGUxNWIxYWU4YzU5MjY5ZGUzOTA0MjBmODRlZWIyODcwN2I3OTNlZDIzYjFjZDI4OTAzMDE3NTU4MzRlZWQ0"
     },
     {
         id: 14,
@@ -160,10 +151,6 @@ export const productos = [
         marca: "Techno",
         categoria: "Accesorios",
         image: "https://medias.musimundo.com/medias/00460005-144637-144637-01-144637-01.jpg-size515?context=bWFzdGVyfGltYWdlc3wzNDQ5OXxpbWFnZS9qcGVnfGg0OC9oMWYvMTAzODEwOTU1NjczOTAvMDA0NjAwMDUtMTQ0NjM3LTE0NDYzN18wMS0xNDQ2MzdfMDEuanBnX3NpemU1MTV8Y2FjMThmOWMyOGYzMTNhZTBkNzM5M2IxOGNiM2MxZjY0YWI0ZmU3MDBiZDhkODdiYTY2MjkyMzQ3YjRhYjFiYw"
-    },
+    }
 
-
-    
-   
-    
 ]
