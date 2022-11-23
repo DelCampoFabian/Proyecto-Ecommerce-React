@@ -4,7 +4,7 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Cart from './componentes/Cart/Cart';
 import NavBar from './componentes/navbar/NavBar';
-import CartProvider from './componentes/CartContext/CartContext';
+import CartProvider from './CartContext/CartContext';
 import Formulario from './componentes/Formulario/Formulario';
 
 function App() {

@@ -9,7 +9,7 @@ import {FaTruck, FaStoreAlt} from 'react-icons/fa';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../../CartContext/CartContext';
 
 
 const ItemDetail = ({detail}) => {

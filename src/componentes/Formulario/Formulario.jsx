@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { db } from '../../services/firebaseConfig'
-import { CartContext } from '../CartContext/CartContext'
+import { CartContext } from '../../CartContext/CartContext'
 
 const Formulario = () => {
     const [name, setName] = useState("")
