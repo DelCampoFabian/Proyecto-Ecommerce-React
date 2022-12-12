@@ -160,7 +160,6 @@ margin-top: 16px;
     align-items: flex-start;
     margin-top: 50px;
     padding: 32px;
-    
     border-radius: 5px;
     
     
@@ -349,13 +348,17 @@ margin-top: 16px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: 2px solid #0F81B1;
+    padding: 32px;
+    border-radius: 8px;
 }
 .form__compra input {
     margin: 6px 0;
     padding: 6px 16px;
+    font-size: 14px;
     outline: none;
     border: 2px solid #0F81B1;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 .prod__container-back{
     font-size: 14px;
@@ -373,3 +376,177 @@ margin-top: 16px;
     justify-content: center;
     align-items: center;
 }
+/* MEDIA */
+
+@media (max-width:992px){
+    
+.detail__container {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.detail__img {
+    margin: 0px;
+    border-right: none ;
+    padding: 0 16px;
+    
+}
+.detail__img img {
+    max-width: 250px;
+    max-height:300px;
+   
+}
+
+.detail__text {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+ 
+
+.detail__text-precio, .detail__text-marca,.detail__text-nombre{
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin: 10px auto;
+}  
+
+.span__stock {
+    margin: 10px;
+    font-size: 16px;
+}
+.detail__text-pagos{
+    font-size: 16px;
+    margin: 10px auto;
+}
+.detail__text-unidades{
+    font-weight: 600;
+    margin: 10px auto;
+    font-size: 16px;
+} 
+
+.pagos__container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pagos__container img {
+    width: 45px;
+    height: 30px;
+}
+.detail__text-envio{
+    margin: 10px auto;
+    font-size: 16px;
+}
+.detail__text-envio i {
+    font-size: 22px;
+}
+.generic-button {
+    font-size: 14px;
+    padding: 2px 10px;
+}
+.count {
+    padding: 0px 2px 2px;
+    font-size: 16px;
+}
+.count__total {
+    padding: 0 5px;
+    font-size: 16px;
+   
+}
+
+.cart__sinProd{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__cart{
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.cart__container{
+    text-align: start;
+}
+.prod__container{
+    margin: 16px 0;
+    padding: 26px;
+    
+}
+.prod__container-img,.prod__container-nombre,.prod__container-precio{
+    margin: 0 15px;
+}
+.prod__container-img,.prod__container-stock{
+    display: none;
+}
+.prod__container-delete{
+    font-size: 11px;
+}
+
+.prod__container-precio,.prod__container-stock{
+    font-size: 12px;
+}
+
+.prod__container-nombre{
+    font-size: 12px;
+}
+
+.cart__clear{
+    font-size: 11px;
+}
+
+.resumen__compra {
+    padding: 0 16px;
+}
+.resumen__titulo,.resumen__precio,.resumen__envio{
+    font-size: 16px;
+    margin: 16px 0;
+}
+
+
+}
+
+/* Footer */
+
+.footer {
+    
+    background-color: #0F81B1;
+    margin-top: 30px;
+}
+.footer__title-container{
+    margin: 15px 0;
+}
+.footer__title-container h3{
+    font-family: "Orbitron";
+    font-size: 24px;
+}
+.footer__redes-container, .footer__soporte-container, .footer__compania-container{
+    margin: 15px 0;
+    text-align: center;
+}
+.footer__redes-container ul, .footer__soporte-container ul, .footer__compania-container ul{
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+.footer__redes-container ul li, .footer__soporte-container ul li, .footer__compania-container ul li{
+    margin: 15px 0;
+}
+
+
+    

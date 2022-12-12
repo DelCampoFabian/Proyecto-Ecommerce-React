@@ -6,6 +6,7 @@ import Cart from './componentes/Cart/Cart';
 import NavBar from './componentes/navbar/NavBar';
 import CartProvider from './CartContext/CartContext';
 import Formulario from './componentes/Formulario/Formulario';
+import Footer from './componentes/Footer/Footer';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
                         <Route path='/cart' element={<Cart />} />
                         <Route path='/checkout' element={<Formulario />} />
                     </Routes>
+                    <Footer/>
                 </CartProvider>
             </BrowserRouter>
         </>
